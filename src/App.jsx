@@ -1,10 +1,21 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./components/Home/Home";
+import Demo from "./components/Demo/Demo";
+import HomeHeader from "./components/Home/HomeHeader";
+import DemoHeader from "./components/Demo/DemoHeader";
 
 function App() {
+  const auth = false;
+
   return (
-    <div>
-      <h1 className="text-red-500 font-bold text-3xl">Hello</h1>
-    </div>
+    <>
+      {auth ? <HomeHeader /> : <DemoHeader />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/demo" element={<Demo />} />
+      </Routes>
+    </>
   );
 }
 
