@@ -47,6 +47,7 @@ const DemoHeader = () => {
             <Auth modal={modal} setModal={setModal} />
           </div>
           <button
+            onClick={() => setModal(true)}
             className={`text-white rounded-full px-3 p-2 text-sm font-medium ${
               isActive ? "bg-green-700" : "bg-black"
             }`}
