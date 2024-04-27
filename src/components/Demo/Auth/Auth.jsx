@@ -7,16 +7,16 @@ import { AiOutlineMail } from "react-icons/ai";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 
-const Auth = () => {
+const Auth = ({ modal, setModal }) => {
   const [createUser, setCreateUser] = useState(false);
   const [signInReq, setSignInReq] = useState("");
-  const [modal, setModal] = useState(true);
+  // const [modal, setModal] = useState(false);
 
   return (
     <Modal modal={modal} setModal={setModal}>
       <section
-        className={`z-50 fixed top-0 bottom-0 left-0 md:left-[10rem]
-        overflow-auto right-0 md:right-[10rem] bg-white shadows transition-all duration-500
+        className={`z-50 fixed top-4 bottom-4 left-4  md:left-[10rem]
+        overflow-auto right-4 md:right-[10rem] bg-white shadows transition-all duration-500
         ${modal ? "visible opacity-100" : "invisible opacity-0"}`}
       >
         <button
